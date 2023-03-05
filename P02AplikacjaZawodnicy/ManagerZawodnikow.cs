@@ -227,5 +227,21 @@ namespace P01AplikacjaZawodnicy
             // zrobić odpowiednik select distinct kraj from zawodnicy 
             return tablicaZawodnikow.Select(x => x.Kraj).Distinct().OrderBy(x=>x).ToArray();
         }
+
+        public ZawodnikVM[] PrzefiltrujZawodnikow(string filtr)
+        {
+            filtr = filtr.ToLower();
+            return tablicaZawodnikow
+               .Where(x => 
+                   x.Kraj.ToLower().Contains(filtr) ||
+                   x.ImieNazwisko.ToLower().Contains(filtr) ||
+                   x.Wzrost.ToString().Contains(filtr) ||
+                   x.Waga.ToString().Contains(filtr) ||
+
+                   ((x.DataUrodzenia != null) &&
+                       x.DataUrodzenia.Value.ToString("ddMMYYY").Contains(filtr)
+                   ))
+               .ToArray();
+        }
     }
 }

@@ -90,6 +90,9 @@
     <Content Include="assets\js\plugins\chartjs.min.js" />
     <Content Include="assets\js\plugins\perfect-scrollbar.jquery.min.js" />
     <Content Include="Default.aspx" />
+    <Content Include="Default.js" />
+    <Content Include="DefaultServer.aspx" />
+    <Content Include="Images\loading-gif.gif" />
     <Content Include="SzczegolyZawodnika.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -100,6 +103,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultServer.aspx.cs">
+      <DependentUpon>DefaultServer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultServer.aspx.designer.cs">
+      <DependentUpon>DefaultServer.aspx</DependentUpon>
     </Compile>
     <Compile Include="GrupaKraju.cs" />
     <Compile Include="ManagerZawodnikow.cs" />

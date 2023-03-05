@@ -126,10 +126,10 @@
             <span class="navbar-toggler-bar navbar-kebab"></span>
           </button>
           <div class="collapse navbar-collapse justify-content-end" id="navigation">
-            <form>
+            <form onsubmit="return false;">
               <div class="input-group no-border">
-                <input type="text" value="" class="form-control" placeholder="Search...">
-                <div class="input-group-append">
+                <input id="txtSzukaj" type="text" value="" class="form-control" placeholder="Search...">
+                <div id="dvSzukaj" class="input-group-append">
                   <div class="input-group-text">
                     <i class="now-ui-icons ui-1_zoom-bold"></i>
                   </div>
@@ -181,7 +181,10 @@
                 <h4 class="card-title"><a href="SzczegolyZawodnika.aspx">Dodaj nowego zawodnika</a> </h4>
               </div>
               <div class="card-body">
-                <div class="table-responsive">
+              
+                <img id="imgLoading" style="width:50px; display:none" src="Images/loading-gif.gif" />
+                <div id="dvTabelkaKontener" class="table-responsive">
+
                   <table class="table">
                     <thead class=" text-primary">
                       <th>
@@ -263,6 +266,8 @@
   <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="../assets/js/now-ui-dashboard.min.js?v=1.5.0" type="text/javascript"></script><!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
   <script src="../assets/demo/demo.js"></script>
+
+  <script src="Default.js"></script>
 </body>
 
 </html>
