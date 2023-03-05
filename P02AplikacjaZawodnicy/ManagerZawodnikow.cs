@@ -232,8 +232,9 @@ namespace P01AplikacjaZawodnicy
             int ile, int strona)
         {
             filtr = filtr.ToLower();
-            return tablicaZawodnikow
-               .Where(x => 
+
+            tablicaZawodnikow = tablicaZawodnikow
+               .Where(x =>
                    x.Kraj.ToLower().Contains(filtr) ||
                    x.ImieNazwisko.ToLower().Contains(filtr) ||
                    x.Wzrost.ToString().Contains(filtr) ||
@@ -242,6 +243,9 @@ namespace P01AplikacjaZawodnicy
                    ((x.DataUrodzenia != null) &&
                        x.DataUrodzenia.Value.ToString("ddMMYYY").Contains(filtr)
                    ))
+               .ToArray();
+
+            return tablicaZawodnikow
                .Skip(ile*(strona-1))
                .Take(ile)
                .ToArray();

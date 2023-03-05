@@ -29,8 +29,7 @@ namespace P02AplikacjaZawodnicy
             mz.WczytajZawodnikow();
             Zawodnicy = mz.PrzefiltrujZawodnikow(filtr,ile,strona);
 
-
-            int ileRekordow = mz.TablicaZawodnikow.Count();
+            int ileRekordow = mz.TablicaZawodnikow.Length;
 
             double liczbaStron = Math.Ceiling(Convert.ToDouble(ileRekordow) / ile);
             LiczbaStron = Convert.ToInt32(liczbaStron);

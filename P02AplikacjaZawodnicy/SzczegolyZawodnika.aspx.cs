@@ -22,18 +22,19 @@ namespace P02AplikacjaZawodnicy
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            Thread.Sleep(2000);
+       //     Thread.Sleep(2000);
             string idString = Request["id"];
 
             ManagerZawodnikow mz = new ManagerZawodnikow();
             mz.WczytajZawodnikow();
             List<string> kraje = mz.PodajKraje().ToList();
-            //if (!Page.IsPostBack)
-            //    kraje.Insert(0, "-- podaj kraj --");
-                     
-            ddlKraj.DataSource = kraje;
-            ddlKraj.DataBind();
+            if (!Page.IsPostBack)
+            {
+                kraje.Insert(0, "-- podaj kraj --");
 
+                ddlKraj.DataSource = kraje;
+                ddlKraj.DataBind();
+            }
             if (string.IsNullOrEmpty(idString)) // tryb tworzenia nowego zawodnika 
             {
                 trybOperacji = TrybOperacji.Nowy;
