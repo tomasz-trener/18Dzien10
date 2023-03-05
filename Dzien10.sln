@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P05DataGridView", "P05DataG
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P06rzetwarzanieAsynchroniczneAJAX", "P06rzetwarzanieAsynchroniczneAJAX\P06rzetwarzanieAsynchroniczneAJAX.csproj", "{0647609C-ED74-4A83-A1CA-030013A7F4B9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P07Pytania", "P07Pytania\P07Pytania.csproj", "{0951D0A8-7CFF-41BB-B30B-4DBD608A558A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{0647609C-ED74-4A83-A1CA-030013A7F4B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0647609C-ED74-4A83-A1CA-030013A7F4B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0647609C-ED74-4A83-A1CA-030013A7F4B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0951D0A8-7CFF-41BB-B30B-4DBD608A558A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0951D0A8-7CFF-41BB-B30B-4DBD608A558A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0951D0A8-7CFF-41BB-B30B-4DBD608A558A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0951D0A8-7CFF-41BB-B30B-4DBD608A558A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

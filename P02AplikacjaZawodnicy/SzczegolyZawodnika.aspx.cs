@@ -28,7 +28,9 @@ namespace P02AplikacjaZawodnicy
             ManagerZawodnikow mz = new ManagerZawodnikow();
             mz.WczytajZawodnikow();
             List<string> kraje = mz.PodajKraje().ToList();
-            kraje.Insert(0, "-- podaj kraj --");
+            //if (!Page.IsPostBack)
+            //    kraje.Insert(0, "-- podaj kraj --");
+                     
             ddlKraj.DataSource = kraje;
             ddlKraj.DataBind();
 
@@ -47,9 +49,6 @@ namespace P02AplikacjaZawodnicy
 
                 if (!Page.IsPostBack)
                 {
-                   
-                   
-
                     Wyswietlany = mz.PodajZawodnika(id);
 
                     txtId.Text = Convert.ToString(Wyswietlany.Id_zawodnika);

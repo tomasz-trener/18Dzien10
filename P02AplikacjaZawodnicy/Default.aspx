@@ -184,38 +184,9 @@
               
                 <img id="imgLoading" style="width:50px; display:none" src="Images/loading-gif.gif" />
                 <div id="dvTabelkaKontener" class="table-responsive">
-
-                  <table class="table">
-                    <thead class=" text-primary">
-                      <th>
-                        Imie i nazwisko
-                      </th>
-                      <th>
-                        Kraj
-                      </th>
-                      <th>
-                        Wzrost
-                      </th>
-                      <th  >
-                        Data urodzenia
-                      </th>
-                    </thead>
-                    <tbody>
-                    
-                    <% foreach (var z in Zawodnicy)
-                        { %>    
-                            <tr>
-                                <td> <a href="SzczegolyZawodnika.aspx?id=<%= z.Id_zawodnika %>"> <%= z.ImieNazwisko %></a></td>
-                                <td><%= z.Kraj %></td>
-                                <td><%= z.Wzrost %></td>
-                                <td><%= z.DataUrodzenia?.ToString("dd.MM.yyyy") %></td>
-                            </tr>
-                        
-                <%      } %>
-
-                    </tbody>
-                  </table>
                 </div>
+                  <input id="btnPrzejdz" type="button" value="Przejdz Do Strony" />
+
               </div>
             </div>
           </div>

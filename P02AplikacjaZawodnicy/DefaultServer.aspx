@@ -30,3 +30,21 @@
 
                     </tbody>
                   </table>
+
+
+ <select id="wyborStrony">
+     <% for (int i = 1; i <= LiczbaStron; i++)
+         {
+
+             if (i==WybranaStrona)
+             {%>
+                 <option value="<%=i %>" selected><%=i %></option>
+         <%  }
+            else
+            {%>
+                <option value="<%=i %>" ><%=i %></option>
+         <% }
+
+         } %>
+ </select>
+

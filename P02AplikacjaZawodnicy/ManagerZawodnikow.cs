@@ -228,7 +228,8 @@ namespace P01AplikacjaZawodnicy
             return tablicaZawodnikow.Select(x => x.Kraj).Distinct().OrderBy(x=>x).ToArray();
         }
 
-        public ZawodnikVM[] PrzefiltrujZawodnikow(string filtr)
+        public ZawodnikVM[] PrzefiltrujZawodnikow(string filtr,
+            int ile, int strona)
         {
             filtr = filtr.ToLower();
             return tablicaZawodnikow
@@ -241,6 +242,8 @@ namespace P01AplikacjaZawodnicy
                    ((x.DataUrodzenia != null) &&
                        x.DataUrodzenia.Value.ToString("ddMMYYY").Contains(filtr)
                    ))
+               .Skip(ile*(strona-1))
+               .Take(ile)
                .ToArray();
         }
     }

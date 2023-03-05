@@ -209,7 +209,7 @@
                                                <!--  <div class="form-group">   komentarz html  -->
                         <label>Kraj</label>
                          <%--<asp:TextBox ID="txtKraj" CssClass="form-control"  runat="server"></asp:TextBox>--%>
-                        <asp:DropDownList ID="ddlKraj" CssClass="form-control"  runat="server"></asp:DropDownList>
+                        <asp:DropDownList   ID="ddlKraj" CssClass="form-control"  runat="server"></asp:DropDownList>
 
 
                       </div>

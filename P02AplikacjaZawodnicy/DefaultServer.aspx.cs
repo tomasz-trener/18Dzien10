@@ -12,6 +12,8 @@ namespace P02AplikacjaZawodnicy
     public partial class DefaultServer : System.Web.UI.Page
     {
         public ZawodnikVM[] Zawodnicy;
+        public int LiczbaStron;
+        public int WybranaStrona;
         protected void Page_Load(object sender, EventArgs e)
         {
             Thread.Sleep(3000);
@@ -19,11 +21,19 @@ namespace P02AplikacjaZawodnicy
 
             string filtr = Request["filtr"];
 
+            int ile = Convert.ToInt32(Request["ilePokazac"]);
+            int strona = Convert.ToInt32(Request["nrStrony"]);
+            WybranaStrona = strona;
+
             ManagerZawodnikow mz = new ManagerZawodnikow();
             mz.WczytajZawodnikow();
-            Zawodnicy = mz.PrzefiltrujZawodnikow(filtr);
-           
+            Zawodnicy = mz.PrzefiltrujZawodnikow(filtr,ile,strona);
 
+
+            int ileRekordow = mz.TablicaZawodnikow.Count();
+
+            double liczbaStron = Math.Ceiling(Convert.ToDouble(ileRekordow) / ile);
+            LiczbaStron = Convert.ToInt32(liczbaStron);
         }
     }
 }
